@@ -11,19 +11,7 @@ const Projects = () => {
         {/* ESP32 Stock Ticker Display */}
         <div className="proj">
           <h4>ESP32 Stock Ticker Display</h4>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/AppDevelopment1.jpg`}
-            className="img-fluid rounded-corners d-block mx-auto"
-            alt="Responsive image"
-            style={{ maxWidth: '100%', height: 'auto' }}
-          />
-          <img
-                  className="d-block w-100 rounded-carousel"
-                  src={`https://VincentBot88.github.io/PortfolioWebsite/images/StockTickerImage1.jpg`}
-                  alt="First slide"
-                  style={{ maxHeight: '400px', objectFit: 'cover' }}
-                />
-                
+
           {/* Carousel */}
           <div style={{ marginBottom: '20px' }}>
             <Carousel>
@@ -53,7 +41,7 @@ const Projects = () => {
           </div>
 
           <ul>
-            <li>TESTESTSETSETSETUses an ESP32 to retrieve real-time stock data using the Finnhub Stock API</li>
+            <li>Uses an ESP32 to retrieve real-time stock data using the Finnhub Stock API</li>
             <li>Displays results on an I2C LCD display</li>
             <li>Includes red and green LED price change indicators and a button to scroll through stock tickers</li>
             <li>3D Printed casing with a window for the display</li>
