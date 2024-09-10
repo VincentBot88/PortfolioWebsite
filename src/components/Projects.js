@@ -11,7 +11,13 @@ const Projects = () => {
         {/* ESP32 Stock Ticker Display */}
         <div className="proj">
           <h4>ESP32 Stock Ticker Display</h4>
-
+          <img
+                  className="d-block w-100 rounded-carousel"
+                  src={`https://VincentBot88.github.io/PortfolioWebsite/images/StockTickerImage1.jpg`}
+                  alt="First slide"
+                  style={{ maxHeight: '400px', objectFit: 'cover' }}
+                />
+                
           {/* Carousel */}
           <div style={{ marginBottom: '20px' }}>
             <Carousel>
