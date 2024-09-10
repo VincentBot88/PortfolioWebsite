@@ -62,7 +62,7 @@ const Projects = () => {
         <div style={{ marginBottom: '20px' }}></div>
         <div className="proj">
             <h4>Transistor Amplifier Design Project</h4>
-            <img src={`${process.env.PUBLIC_URL}/images/Amplifier1.png`} className="img-fluid rounded-corners d-block mx-auto" alt="Responsive image" />
+            <img src="images/Amplifier1.png" className="img-fluid rounded-corners d-block mx-auto" alt="Responsive image" />
             <ul>
             <li>Designed, simulated, analyzed, implemented, and tested a single-supply, multistage, inverting, transistor amplifier which fulfills a set of specifications</li>
             </ul>
