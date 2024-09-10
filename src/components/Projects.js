@@ -12,6 +12,12 @@ const Projects = () => {
         <div className="proj">
           <h4>ESP32 Stock Ticker Display</h4>
           <img
+            src={`${process.env.PUBLIC_URL}/images/AppDevelopment1.jpg`}
+            className="img-fluid rounded-corners d-block mx-auto"
+            alt="Responsive image"
+            style={{ maxWidth: '100%', height: 'auto' }}
+          />
+          <img
                   className="d-block w-100 rounded-carousel"
                   src={`https://VincentBot88.github.io/PortfolioWebsite/images/StockTickerImage1.jpg`}
                   alt="First slide"
