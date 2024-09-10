@@ -53,7 +53,7 @@ const Projects = () => {
           </div>
 
           <ul>
-            <li>Uses an ESP32 to retrieve real-time stock data using the Finnhub Stock API</li>
+            <li>TESTESTSETSETSETUses an ESP32 to retrieve real-time stock data using the Finnhub Stock API</li>
             <li>Displays results on an I2C LCD display</li>
             <li>Includes red and green LED price change indicators and a button to scroll through stock tickers</li>
             <li>3D Printed casing with a window for the display</li>
