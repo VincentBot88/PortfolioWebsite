@@ -51,7 +51,7 @@ const Projects = () => {
         <div style={{ marginBottom: '20px' }}></div>
         <div className="proj">
             <h4>High School Android App</h4>
-            <img src="/images/AppDevelopment1.jpg" className="img-fluid rounded-corners d-block mx-auto" alt="Responsive image" style={{ maxWidth: '100%', height: 'auto' }} />
+            <img src="images/AppDevelopment1.jpg" className="img-fluid rounded-corners d-block mx-auto" alt="Responsive image" style={{ maxWidth: '100%', height: 'auto' }} />
             <ul>
             <li>Utilized the Flutter UI software development kit to create an innovative and user-friendly app tailored to the needs of students.</li>
             <li>Coded in Dart to implement robust and efficient app functionalities</li>
