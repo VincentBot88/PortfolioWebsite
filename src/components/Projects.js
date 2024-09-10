@@ -18,7 +18,7 @@ const Projects = () => {
               <Carousel.Item>
                 <img
                   className="d-block w-100 rounded-carousel"
-                  src={`${process.env.PUBLIC_URL}/images/StockTickerImage1.jpg`}
+                  src={`https://VincentBot88.github.io/PortfolioWebsite/images/StockTickerImage1.jpg`}
                   alt="First slide"
                   style={{ maxHeight: '400px', objectFit: 'cover' }}
                 />
@@ -29,7 +29,7 @@ const Projects = () => {
               <Carousel.Item>
                 <img
                   className="d-block w-100 rounded-carousel"
-                  src={`${process.env.PUBLIC_URL}/images/StockTickerImage2.jpg`}
+                  src={`https://VincentBot88.github.io/PortfolioWebsite/images/StockTickerImage2.jpg`}
                   alt="Second slide"
                   style={{ maxHeight: '400px', objectFit: 'cover' }}
                 />
