@@ -65,7 +65,6 @@ const Projects = () => {
             <li>Utilized the Flutter UI software development kit to create an innovative and user-friendly app tailored to the needs of students.</li>
             <li>Coded in Dart to implement robust and efficient app functionalities</li>
             <li>Utilized by 85% of the school population</li>
-            <li><a href="https://app.staugustinechs.ca/" style={{ fontSize: 'inherit' }}>Website</a></li>
           </ul>
         </div>
 

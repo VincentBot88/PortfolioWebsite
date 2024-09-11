@@ -13,9 +13,10 @@
   
   body {
     padding-top: 70px;
-    /* height of your header; adjust accordingly */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px
+    font-size: 18px;
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light text color */
   }
   
   .header {
@@ -24,7 +25,7 @@
     left: 0;
     width: 100%;
     z-index: 1000; /* Arbitrary number, should be higher than the z-index of the rest of the page */
-    background-color: #FFFFFF;
+    background-color: #1F1F1F;
   }
   
   .background-image {
@@ -56,7 +57,7 @@
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: #2979FF;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -91,7 +92,7 @@
   a {
     font-size: 1.5em;
     text-decoration: none;
-    color: black;
+    color: white;
   }
   
   a:hover {
@@ -103,11 +104,21 @@
     width: 70%;
     display: inline-block;
     margin-left: 70px;
+    background-color: #2C2C2C; /* Darker background for the box */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    color: #E0E0E0; /* Light text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for better focus */
+    border: 1px solid #BB86FC; /* Optional border to match the theme */
   }
   
   .links {
     display: inline-block;
     vertical-align: top;
+  }
+
+  .links ul li {
+    margin-bottom: 15px; /* Adds space between the list items */
   }
   
   .about {
@@ -119,12 +130,21 @@
   .experience {
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #B99095;
+    background-color: #1E1E1E;
   }
   
   .exp-content{
     margin: 20px auto; /* Center horizontally with equal top and bottom margins */
     width: 60%; /* You can adjust the width as per your design */
+  }
+
+  .exp{
+    background-color: #2C2C2C; /* Darker background for the box */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    color: #E0E0E0; /* Light text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for better focus */
+    border: 1px solid #BB86FC; /* Optional border to match the theme */
   }
   
   .experience-image {
@@ -139,7 +159,7 @@
   }
   
   .projects {
-    background-color: #FCB5AC;
+    background-color: #1E1E1E;
     display: flex; /* This will make its children (the image and the .exp div) sit side by side */
     align-items: start; /* Align the top of children elements to the top of the .experience div */
   }
@@ -147,6 +167,15 @@
   .proj-content {
     margin: 20px auto; /* Center horizontally with equal top and bottom margins */
     width: 60%; /* You can adjust the width as per your design */
+  }
+
+  .proj{
+    background-color: #2C2C2C; /* Darker background for the box */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    color: #E0E0E0; /* Light text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for better focus */
+    border: 1px solid #BB86FC; /* Optional border to match the theme */
   }
   
   .rounded-corners {

@@ -4,6 +4,8 @@ import Header from './components/Header';
 import About from './components/About';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
+import Contact from './components/Contact';
+import { TypeAnimation } from 'react-type-animation';
 import './App.css';
 
 function App() {
@@ -12,13 +14,30 @@ function App() {
       <Header />
       <div className="background-image"></div>
       <div className="headertext">
-        <h3 className="typing">Hi there, I'm</h3>
+      <TypeAnimation
+        sequence={[
+            // Same substring at the start will only be typed out once, initially
+            "Hi there, I'm",
+            1000, // wait 1s before replacing "Mice" with "Hamsters"
+            "Hello there, I'm",
+            1000,
+            "Nice to meet you, I'm",
+            1000,
+            "I'm",
+            1000
+          ]}
+          wrapper="span"
+          speed={50}
+          style={{ fontSize: '3em', display: 'inline-block', color: '#fff'}}
+          repeat={Infinity}
+       />
         <h5>Vincent Cheng</h5>
       </div>
       <div className="content">
         <About />
         <Projects />
         <Experience />
+        <Contact/>
       </div>
     </div>
   );

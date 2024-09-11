@@ -1,12 +1,35 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFile } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
   return (
     <div className="about" id="about">
       <div className="links">
         <ul>
-          <li><a href="https://github.com/VincentBot88" target="_blank"><i className="fa fa-github"></i> Github</a></li>
-          <li><a href="www.linkedin.com/in/vincentcheng1618" target="_blank"><i className="fa fa-linkedin-square"></i> LinkedIn</a></li>
+          <li>
+            <a href="https://github.com/VincentBot88" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faGithub} /> Github
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/vincentcheng1618" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="mailto: name@email.com" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faEnvelope} /> Email
+            </a>
+          </li>
+          <li>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faFile} /> Resume
+            </a>
+          </li>
         </ul>
       </div>
       <div className="aboutText">

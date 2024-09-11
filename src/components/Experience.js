@@ -10,7 +10,7 @@ const Experience = () => {
           <h4>Anvil Business Center · Internship</h4>
           <h6>March 2024 - July 2024</h6>
           <ul>
-            <li>Designed an interactive website for the company</li>
+            <li>Designed an interactive website for the company providing both communal and customized enterprise SaaS solutions to end users</li>
             <li>Utilized Figma for design and prototyping</li>
             <li>HTML, JavaScript, CSS, React.js</li>
           </ul>
