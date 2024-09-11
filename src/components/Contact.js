@@ -24,7 +24,7 @@ const Contact = () => {
           </a>
         </li>
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="https://docs.google.com/document/d/10MQg21yuvH1zvps0jC7fUQscR45kmZjd38pIpIC47qU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFile} /> Resume
           </a>
         </li>
