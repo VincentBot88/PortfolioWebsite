@@ -21,7 +21,7 @@ const About = () => {
             </a>
           </li>
           <li>
-            <a href="mailto: name@email.com" target="_blank" rel="noopener noreferrer">
+            <a href="mailto: vincentcheng1618@gmail.com" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faEnvelope} /> Email
             </a>
           </li>

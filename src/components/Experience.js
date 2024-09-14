@@ -16,6 +16,19 @@ const Experience = () => {
           </ul>
         </div>
       </div>
+      <div className="exp-content">
+        <h2>Other Experience</h2>
+        <div className="exp">
+          <h4>Lifeguard and Swim Instructor</h4>
+          <h4>City of Markham</h4>
+          <h6>July 2024 - August 2024</h6>
+          <ul>
+            <li>Collaborated with a team of 15+ lifeguards</li>
+            <li>Supervised the safety of 200+ guests daily in a designated aquatic area</li>
+            <li>Trained and mentored 10+ new lifeguards in safety procedures and emergency response</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
