@@ -35,10 +35,24 @@ const About = () => {
       <div className="aboutText">
         <h4>About Me</h4>
         <p>Pursuing my passion for technology and innovation, I am currently studying Computer Engineering at Toronto
-        Metropolitan University, where I achieved the Dean's List recognition. I am interested in all thing electronics, such as robotics and circuit design. I also have experience developing with Java, C++, Python and HTML/CSS/JS. 
+        Metropolitan University. I am interested in all thing electronics, such as robotics and circuit design. I also have experience developing with Java, C++, Python and HTML/CSS/JS. 
         In addition to my academic pursuits, I can be found at the gym or tinkering with electronics.
         </p>
       </div>
+
+      <div className="tech-stack">
+        <div className="tech-images">
+          <img src="images/java.png" alt="Java" />
+          <img src="images/c.png" alt="C" />
+          <img src="images/python.png" alt="Python" />
+          <img src="images/html.png" alt="HTML" />
+          <img src="images/css.png" alt="CSS" />
+          <img src="images/js.png" alt="JS" />
+          <img src="images/react.png" alt="React" />
+          <img src="images/mongodb.png" alt="MongoDB" />
+        </div>
+      </div>
+
     </div>
   );
 }

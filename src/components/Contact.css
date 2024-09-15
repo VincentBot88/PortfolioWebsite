@@ -22,12 +22,14 @@
   
   .contact-list li a {
     font-size: 1.5em;
-
     text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
   }
   
   .contact-list li a:hover {
-    color: #82B1FF; /* Light blue on hover */
+    color: #BB86FC; /* Light blue on hover */
+    transform: scale(1.1);
   }
   
   footer {

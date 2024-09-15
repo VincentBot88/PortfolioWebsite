@@ -52,6 +52,25 @@ const Projects = () => {
 
         <div style={{ marginBottom: '20px' }}></div>
 
+        {/* Full Stack Financial Tracker */}
+        <div className="proj">
+          <h4>Full Stack Financial Tracker App</h4>
+          <img
+            src={`/images/financialtracker.png`}
+            className="img-fluid rounded-corners d-block mx-auto"
+            alt="Responsive image"
+            style={{ maxWidth: '100%', height: 'auto' }}
+          />
+          <ul>
+            <li>Developed a full-stack finance tracker application using the MERN stack to track and manage personal expenses and budgets.</li>
+            <li>Implemented user authentication and authorization with Clerk.</li>
+            <li>Designed a responsive and interactive frontend with React.js, utilizing RESTful APIs to fetch and display real-time financial data from a MongoDB database.</li>
+            <li>Integrated backend logic using Node.js and Express.js to handle CRUD operations, enabling users to add, update, and delete transactions.</li>
+          </ul>
+        </div>
+
+        <div style={{ marginBottom: '20px' }}></div>
+
         {/* High School Android App */}
         <div className="proj">
           <h4>High School Android App</h4>
