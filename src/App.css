@@ -24,15 +24,6 @@
     margin-bottom: 20px; /* Space below the heading */
   }
 
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Arbitrary number, should be higher than the z-index of the rest of the page */
-    background-color: #1F1F1F;
-  }
-  
   .background-image {
     min-height: 100vh;
     width: 100%;
@@ -40,56 +31,7 @@
     background-position: center;
     background-size: cover;
   }
-  
-  nav {
-    display: flex;
-    padding: 2% 6%;
-    align-items: center;
-  }
-  
-  .nav-links {
-    display: flex;
-    width: 100%; 
-  }
-  
-  .nav-links ul {
-    display: flex; 
-    width: 100%;   
-    justify-content: space-between;
-  }
 
-  .nav-links ul li {
-    position: relative;
-  }
-
-  .nav-links ul li a {
-    display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-
-  .nav-links ul li:hover a {
-    transform: scale(1.1);
-    color: #BB86FC;
-  }
-
-  .nav-links ul li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #BB86FC;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-  }
-  
-  .nav-links ul li:hover::after {
-    width: 100%;
-  }
-  
   h3 {
     font-family: 'Tangerine', serif;
     font-size: 54px; /* Adjust the size as needed */
@@ -103,7 +45,7 @@
   
   .headertext {
     position: absolute;
-    top: 70%;
+    top: 60%;
     right: 10%;
   }
   
@@ -248,68 +190,41 @@
     padding-top: 50px;
   }
   
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .col {
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    margin-right: 10px;
-    position: relative;
-    overflow: hidden;
-    width: 400px; 
-    height: 500px; 
-    box-sizing: border-box;
-    padding: 0;
-  }
-  
-  .col img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
-  
-  .layer {
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-  }
-  
-  .layer:hover {
-    background: rgba(226, 0, 0, 0.7);
-  }
-  
-  .layer h1 {
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-  }
-  
-  .layer:hover h1 {
-    bottom: 49%;
-    opacity: 1;
-  }
-  
   .rounded-carousel {
     border-radius: 15px; /* Adds rounded corners */
     height: 500px; /* Adjust height to your preference */
     object-fit: cover; /* Ensures the image fits inside the container */
   }
+
+  @media screen and (max-width: 768px) {
+    .background-image {
+      background-position: 30% center;
+    }
+
+    .about, .proj-content, .exp-content {
+      width: 90%;
+      margin: 20px auto;
+    }
   
+    .aboutText, .proj {
+      width: 100%;
+      margin-left: 0;
+      padding: 15px;
+      font-size: 14px;
+    }
   
+    .about h2, .proj h2, .exp h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .projects {
+      flex-direction: column;
+    }
+
+    .rounded-carousel {
+      height: 300px;
+    }
+
+  }
+    

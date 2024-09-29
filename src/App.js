@@ -16,9 +16,8 @@ function App() {
       <div className="headertext">
       <TypeAnimation
         sequence={[
-            // Same substring at the start will only be typed out once, initially
             "Hi there, I'm",
-            1000, // wait 1s before replacing "Mice" with "Hamsters"
+            1000,
             "Hello there, I'm",
             1000,
             "Nice to meet you, I'm",
