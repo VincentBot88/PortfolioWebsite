@@ -197,9 +197,6 @@
   }
 
   @media screen and (max-width: 768px) {
-    .background-image {
-      background-position: 30% center;
-    }
 
     .about, .proj-content, .exp-content {
       width: 90%;

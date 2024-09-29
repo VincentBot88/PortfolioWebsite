@@ -98,9 +98,44 @@ const Projects = () => {
             alt="Responsive image"
           />
           <ul>
-            <li>Designed, simulated, analyzed, implemented, and tested a single-supply, multistage, inverting, transistor amplifier which fulfills a set of specifications</li>
+            <li>Designed, simulated, analyzed, implemented, and tested a single-supply, multistage, inverting, transistor amplifier</li>
+            <li>Conducted calculations for resistance, capacitance, and biasing, and verified results through simulations.</li>
           </ul>
         </div>
+
+        <div style={{ marginBottom: '20px' }}></div>
+
+        <div className="proj">
+          <h4>Simple General-Purpose Processor Design</h4>
+          <img
+            src={`${process.env.PUBLIC_URL}/images/CPU.png`}
+            className="img-fluid rounded-corners d-block mx-auto"
+            alt="Responsive image"
+          />
+          <ul>
+            <li>Designed and implemented a simple general-purpose processor using VHDL, Quartus II, and an FPGA board.</li>
+            <li>Developed key components, including an Arithmetic and Logic Unit (ALU), a Control Unit with a Finite State
+            Machine (FSM), and a 4x16 Decoder.</li>
+            <li>Utilized microcode operations to control arithmetic and logic processes, with outputs displayed on
+            seven-segment displays.</li>
+          </ul>
+        </div>
+
+        <div style={{ marginBottom: '20px' }}></div>
+
+        <div className="proj">
+          <h4>Stocks and Crypto Research Automation</h4>
+          <img
+            src={''}
+            className="img-fluid rounded-corners d-block mx-auto"
+            alt=""
+          />
+          <ul>
+            <li>UNDER CONSTRUCTION.</li>
+
+          </ul>
+        </div>
+
       </div>
     </div>
   );
