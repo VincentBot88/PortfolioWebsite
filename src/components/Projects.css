@@ -1,0 +1,72 @@
+.projects {
+    background-color: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.proj-content {
+    width: 60%; /* Keep it 60% width for desktop */
+    margin: 20px auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+    gap: 20px; /* Space between project boxes */
+}
+
+.proj {
+    background-color: #2C2C2C;
+    padding: 20px;
+    border-radius: 15px;
+    color: #E0E0E0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #BB86FC;
+    transition: transform 0.3s ease, grid-column 0.3s ease;
+    cursor: pointer;
+}
+
+.proj:hover {
+    transform: scale(1.05);
+}
+
+.project-details {
+    margin-top: 10px;
+}
+
+.rounded-corners {
+    border-radius: 10px;
+}
+
+/* Expanded Project Styling */
+.proj.expanded {
+    grid-column: span 2; /* Make expanded project span both columns */
+    transform: scale(1.05); /* Add subtle scaling */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .proj-content {
+        width: 90%;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Still two columns */
+    }
+
+    .proj.expanded {
+        grid-column: span 2; /* Expanded project takes full width on tablet */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .proj.expanded {
+        grid-column: span 1; /* Expanded project still takes full width */
+    }
+}

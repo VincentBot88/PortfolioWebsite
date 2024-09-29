@@ -158,69 +158,24 @@
       list-style-type: "> ";
       padding-left: 40px;  
   }
-  
-  .projects {
-    background-color: #1E1E1E;
-    display: flex; /* This will make its children (the image and the .exp div) sit side by side */
-    align-items: start; /* Align the top of children elements to the top of the .experience div */
-  }
-  
-  .proj-content {
-    margin: 20px auto; /* Center horizontally with equal top and bottom margins */
-    width: 60%; /* You can adjust the width as per your design */
-  }
-
-  .proj{
-    background-color: #2C2C2C; /* Darker background for the box */
-    padding: 20px;
-    border-radius: 15px; /* Rounded corners */
-    color: #E0E0E0; /* Light text color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for better focus */
-    border: 1px solid #BB86FC; /* Optional border to match the theme */
-  }
-  
-  .rounded-corners {
-    border-radius: 10px; /* Adjust the value to your preference */
-  }
-  
-  .pages {
-    width: 60%;
-    margin: 20px auto;
-    text-align: center;
-    padding-top: 50px;
-  }
-  
-  .rounded-carousel {
-    border-radius: 15px; /* Adds rounded corners */
-    height: 500px; /* Adjust height to your preference */
-    object-fit: cover; /* Ensures the image fits inside the container */
-  }
 
   @media screen and (max-width: 768px) {
 
-    .about, .proj-content, .exp-content {
+    .about, .exp-content {
       width: 90%;
       margin: 20px auto;
     }
   
-    .aboutText, .proj {
+    .aboutText {
       width: 100%;
       margin-left: 0;
       padding: 15px;
       font-size: 14px;
     }
   
-    .about h2, .proj h2, .exp h2 {
+    .about h2, .exp h2 {
       font-size: 24px;
       margin-bottom: 10px;
-    }
-
-    .projects {
-      flex-direction: column;
-    }
-
-    .rounded-carousel {
-      height: 300px;
     }
 
   }

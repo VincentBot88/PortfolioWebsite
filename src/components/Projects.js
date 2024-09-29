@@ -1,144 +1,111 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import './Projects.css';
+
+const projectsData = [
+  {
+    title: "ESP32 Stock Ticker Display",
+    imgSrc: "https://VincentBot88.github.io/PortfolioWebsite/images/StockTickerImage1.jpg",
+    details: [
+      "Uses an ESP32 to retrieve real-time stock data using the Finnhub Stock API",
+      "Displays results on an I2C LCD display",
+      "Includes red and green LED price change indicators and a button to scroll through stock tickers",
+      "3D Printed casing with a window for the display",
+      "Soldered wiring",
+      "Coded in C++"
+    ],
+    additionalImages: [
+      "https://VincentBot88.github.io/PortfolioWebsite/images/StockTickerImage1.jpg",
+      "https://VincentBot88.github.io/PortfolioWebsite/images/StockTickerImage2.jpg"
+    ]
+  },
+  {
+    title: "Full Stack Financial Tracker App",
+    imgSrc: "/images/financialtracker.png",
+    details: [
+      "Developed a full-stack finance tracker application using the MERN stack to track and manage personal expenses and budgets.",
+      "Implemented user authentication and authorization with Clerk.",
+      "Designed a responsive and interactive frontend with React.js, utilizing RESTful APIs to fetch and display real-time financial data from a MongoDB database.",
+      "Integrated backend logic using Node.js and Express.js to handle CRUD operations, enabling users to add, update, and delete transactions."
+    ]
+  },
+  {
+    title: "High School Android App",
+    imgSrc: `${process.env.PUBLIC_URL}/images/AppDevelopment1.jpg`,
+    details: [
+      "Utilized the Flutter UI software development kit to create an innovative and user-friendly app tailored to the needs of students.",
+      "Coded in Dart to implement robust and efficient app functionalities",
+      "Utilized by 85% of the school population"
+    ]
+  },
+  {
+    title: "Transistor Amplifier Design Project",
+    imgSrc: `${process.env.PUBLIC_URL}/images/Amplifier1.png`,
+    details: [
+      "Designed, simulated, analyzed, implemented, and tested a single-supply, multistage, inverting, transistor amplifier",
+      "Conducted calculations for resistance, capacitance, and biasing, and verified results through simulations."
+    ]
+  },
+  {
+    title: "Simple General-Purpose Processor Design",
+    imgSrc: `${process.env.PUBLIC_URL}/images/CPU.png`,
+    details: [
+      "Designed and implemented a simple general-purpose processor using VHDL, Quartus II, and an FPGA board.",
+      "Developed key components, including an Arithmetic and Logic Unit (ALU), a Control Unit with a Finite State Machine (FSM), and a 4x16 Decoder.",
+      "Utilized microcode operations to control arithmetic and logic processes, with outputs displayed on seven-segment displays."
+    ]
+  },
+  {
+    title: "Stocks and Crypto Research Automation",
+    imgSrc: `${process.env.PUBLIC_URL}/images/construction.png`, // Add image if available
+    details: [
+      "Scrape stock and crypto news from the web using Python and BeautifulSoup.",
+      "Automatically summarize financial news with Deep Learning using a fine-tuned Hugging Face Pegasus Transformers model.",
+      "Calculate sentiment for Bitcoin, Ethereum, Tesla and Gamstop using a pre-trained Transformers deep learning pipeline."
+    ]
+  },
+];
 
 const Projects = () => {
+  const [expandedProject, setExpandedProject] = useState(null);
+
+  const toggleProject = (index) => {
+    setExpandedProject(expandedProject === index ? null : index);
+  };
+
   return (
     <div className="projects" id="projects">
       <div className="proj-content">
         <h2>Projects</h2>
-
-        {/* ESP32 Stock Ticker Display */}
-        <div className="proj">
-          <h4>ESP32 Stock Ticker Display</h4>
-
-          {/* Carousel */}
-          <div style={{ marginBottom: '20px' }}>
-            <Carousel>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100 rounded-carousel"
-                  src={`https://VincentBot88.github.io/PortfolioWebsite/images/StockTickerImage1.jpg`}
-                  alt="First slide"
-                  style={{ maxHeight: '400px', objectFit: 'cover' }}
-                />
-                <Carousel.Caption>
-                  <p>ESP32 stock ticker display in action, in a 3D printed case.</p>
-                </Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100 rounded-carousel"
-                  src={`https://VincentBot88.github.io/PortfolioWebsite/images/StockTickerImage2.jpg`}
-                  alt="Second slide"
-                  style={{ maxHeight: '400px', objectFit: 'cover' }}
-                />
-                <Carousel.Caption>
-                  <p>Breadboard Prototype (non I2C LCD display)</p>
-                </Carousel.Caption>
-              </Carousel.Item>
-            </Carousel>
-          </div>
-
-          <ul>
-            <li>Uses an ESP32 to retrieve real-time stock data using the Finnhub Stock API</li>
-            <li>Displays results on an I2C LCD display</li>
-            <li>Includes red and green LED price change indicators and a button to scroll through stock tickers</li>
-            <li>3D Printed casing with a window for the display</li>
-            <li>Soldered wiring</li>
-            <li>Coded in C++</li>
-          </ul>
+        <div className="grid-container">
+          {projectsData.map((project, index) => (
+            <div
+              key={index}
+              className={`proj ${expandedProject === index ? 'expanded' : ''}`}
+              onClick={() => toggleProject(index)}
+            >
+              <h4>{project.title}</h4>
+              <img
+                src={project.imgSrc}
+                className="img-fluid rounded-corners"
+                alt={project.title}
+                style={{ width: '100%', height: 'auto' }}
+              />
+              {expandedProject === index && (
+                <div className="project-details">
+                  <ul>
+                    {project.details.map((detail, i) => (
+                      <li key={i}>{detail}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
-
-        <div style={{ marginBottom: '20px' }}></div>
-
-        {/* Full Stack Financial Tracker */}
-        <div className="proj">
-          <h4>Full Stack Financial Tracker App</h4>
-          <img
-            src={`/images/financialtracker.png`}
-            className="img-fluid rounded-corners d-block mx-auto"
-            alt="Responsive image"
-            style={{ maxWidth: '100%', height: 'auto' }}
-          />
-          <ul>
-            <li>Developed a full-stack finance tracker application using the MERN stack to track and manage personal expenses and budgets.</li>
-            <li>Implemented user authentication and authorization with Clerk.</li>
-            <li>Designed a responsive and interactive frontend with React.js, utilizing RESTful APIs to fetch and display real-time financial data from a MongoDB database.</li>
-            <li>Integrated backend logic using Node.js and Express.js to handle CRUD operations, enabling users to add, update, and delete transactions.</li>
-          </ul>
-        </div>
-
-        <div style={{ marginBottom: '20px' }}></div>
-
-        {/* High School Android App */}
-        <div className="proj">
-          <h4>High School Android App</h4>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/AppDevelopment1.jpg`}
-            className="img-fluid rounded-corners d-block mx-auto"
-            alt="Responsive image"
-            style={{ maxWidth: '100%', height: 'auto' }}
-          />
-          <ul>
-            <li>Utilized the Flutter UI software development kit to create an innovative and user-friendly app tailored to the needs of students.</li>
-            <li>Coded in Dart to implement robust and efficient app functionalities</li>
-            <li>Utilized by 85% of the school population</li>
-          </ul>
-        </div>
-
-        <div style={{ marginBottom: '20px' }}></div>
-
-        {/* Transistor Amplifier Design Project */}
-        <div className="proj">
-          <h4>Transistor Amplifier Design Project</h4>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/Amplifier1.png`}
-            className="img-fluid rounded-corners d-block mx-auto"
-            alt="Responsive image"
-          />
-          <ul>
-            <li>Designed, simulated, analyzed, implemented, and tested a single-supply, multistage, inverting, transistor amplifier</li>
-            <li>Conducted calculations for resistance, capacitance, and biasing, and verified results through simulations.</li>
-          </ul>
-        </div>
-
-        <div style={{ marginBottom: '20px' }}></div>
-
-        <div className="proj">
-          <h4>Simple General-Purpose Processor Design</h4>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/CPU.png`}
-            className="img-fluid rounded-corners d-block mx-auto"
-            alt="Responsive image"
-          />
-          <ul>
-            <li>Designed and implemented a simple general-purpose processor using VHDL, Quartus II, and an FPGA board.</li>
-            <li>Developed key components, including an Arithmetic and Logic Unit (ALU), a Control Unit with a Finite State
-            Machine (FSM), and a 4x16 Decoder.</li>
-            <li>Utilized microcode operations to control arithmetic and logic processes, with outputs displayed on
-            seven-segment displays.</li>
-          </ul>
-        </div>
-
-        <div style={{ marginBottom: '20px' }}></div>
-
-        <div className="proj">
-          <h4>Stocks and Crypto Research Automation</h4>
-          <img
-            src={''}
-            className="img-fluid rounded-corners d-block mx-auto"
-            alt=""
-          />
-          <ul>
-            <li>UNDER CONSTRUCTION.</li>
-
-          </ul>
-        </div>
-
       </div>
     </div>
   );
-}
+};
 
 export default Projects;
