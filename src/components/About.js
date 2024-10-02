@@ -21,7 +21,7 @@ const About = () => {
             </a>
           </li>
           <li>
-            <a href="mailto: vincentcheng1618@gmail.com" target="_blank" rel="noopener noreferrer">
+            <a href="mailto: vincentchengcoop@gmail.com" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faEnvelope} /> Email
             </a>
           </li>
@@ -35,7 +35,7 @@ const About = () => {
       <div className="aboutText">
         <h4>About Me</h4>
         <p>Pursuing my passion for technology and innovation, I am currently studying Computer Engineering at Toronto
-        Metropolitan University. I am interested in all thing electronics, such as robotics and circuit design. I also have experience developing with Java, C++, Python and HTML/CSS/JS. 
+        Metropolitan University. I am interested in all things electronics, such as robotics and circuit design. I also have experience developing with Java, C++, Python and HTML/CSS/JS. 
         In addition to my academic pursuits, I can be found at the gym or tinkering with electronics.
         </p>
       </div>
