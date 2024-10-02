@@ -19,7 +19,7 @@ const Contact = () => {
           </a>
         </li>
         <li>
-          <a href="mailto:name@email.com" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:vincentchengcoop@gmail.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faEnvelope} /> Email
           </a>
         </li>
